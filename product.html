@@ -23,43 +23,6 @@
     <link rel="icon" href="assets/img/icon.png">
 
     <title>Hoper</title>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            //DatePicker Example
-            $('#datetimepicker').datetimepicker();
-
-            //TimePicke Example
-            $('#datetimepicker1').datetimepicker({
-                datepicker: false,
-                format: 'H:i'
-            });
-
-            //Inline DateTimePicker Example
-            $('#datetimepicker2').datetimepicker({
-                format: 'Y-m-d H:i',
-                inline: true
-            });
-
-            //minDate and maxDate Example
-            $('#datetimepicker3').datetimepicker({
-                format: 'Y-m-d',
-                timepicker: false,
-                minDate: '-1970/01/02', //yesterday is minimum date
-                maxDate: '+1970/01/02' //tomorrow is maximum date
-            });
-
-            //allowTimes options TimePicker Example
-            $('#datetimepicker4').datetimepicker({
-                datepicker: false,
-                allowTimes: [
-                    '11:00', '13:00', '15:00',
-                    '16:00', '18:00', '19:00', '20:00'
-                ]
-            });
-
-        });
-    </script>
 </head>
 
 <body id="filter-page">
@@ -86,7 +49,7 @@
     </div>
 
     <main class="page">
-        <header class="sticky-navbar" id="navbar">
+        <header id="navbar" class="fixed-top d-flex align-items-center header-scrolled">
             <div class="navbar navbar-expand-lg">
                 <div class="container-fluid d-block">
                     <div class="navbar-brand-outer">
@@ -350,7 +313,7 @@
                         <div class="warpper">
                             <p>Enter the Price <i class="fal fa-long-arrow-right"></i></p>
                             <input class="form-control saving-input" placeholder="1000000" type="number">
-                            <p style="visibility: hidden;"><i class="fal fa-long-arrow-right"></i>
+                            <p><i class="fal fa-long-arrow-right"></i>
                                 <span>
                                     1000000 LE
                                 </span>
@@ -363,12 +326,34 @@
                 <div class="call-meet">
                     <div class="w-50 row">
                         <div class="col-sm-4 col-6">
-                            <div class="meeting-btn">
-                                <input type="text" id="datetimepicker"/>
-                                <img src="assets/img/meeting-icon.png" width="19px">
-                                <p>Meeting</p>
+                            <a data-bs-toggle="modal" data-bs-target="#meeting-modal">
+                                <div class="meeting-btn">
+                                    <img src="assets/img/meeting-icon.png" width="19px">
+                                    <p>Meeting</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="modal fade pop-up meeting-modal" id="meeting-modal" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" id="datetimepicker" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="primary-btn"
+                                            data-bs-dismiss="modal">Confirm</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-4 col-6">
                             <a data-bs-toggle="modal" data-bs-target="#booking-modal">
@@ -426,14 +411,9 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.979802931369!2d31.445209014629608!3d31.469741756790043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f75b4a48e2f8f3%3A0x89feea371bed4d1f!2sNew%20Mansoura%20City!5e0!3m2!1sen!2seg!4v1641221902172!5m2!1sen!2seg"
                         width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-
-
             </div>
 
         </section>
-
-
-
 
     </main>
 
@@ -637,8 +617,13 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/datetime/js/jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+        jQuery('#datetimepicker').datetimepicker({
+            format: 'd.m.Y H:i',
+            inline: true,
+        });
+    </script>
 </body>
 
 </html>

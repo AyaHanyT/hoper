@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/datetime/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/datetime/css/jquery.datetimepicker.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -21,7 +23,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/icon.png">
     <title>Hoper</title>
-
 </head>
 
 <body id="Home-page">
@@ -47,8 +48,8 @@
         </div>
     </div>
 
-    <main class="home page">
-        <header id="navbar">
+    <main class="home-page">
+        <header id="navbar" class="fixed-top d-flex align-items-center header-transparent">
             <div class="navbar navbar-expand-lg">
                 <div class="container-fluid d-block">
                     <div class="navbar-brand-outer">
@@ -123,8 +124,8 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade filter" id="projects-list" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade filter" id="projects-list" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -209,8 +210,8 @@
                 </div>
             </div>
 
-            <div class="modal fade filter" id="cities-list" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade filter" id="cities-list" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -308,10 +309,10 @@
                                 <div id=my_display_event></div>
                                 <br>
                                 <div id="my_slider"></div>
-                            </div>       
+                            </div>
                             <div class="displys">
-                                <div id=display_start></div>
-                                <div id=display_end></div>
+                                <div id=display_start>10,000LE</div>
+                                <div id=display_end>90,000,000LE</div>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -470,204 +471,235 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-1.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-1.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-2.png" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-2.png" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-3.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+
+                                <div class="project-card">
+                                    <img src="assets/img/project-3.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-4.png" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-4.png" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/fav-3.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/fav-3.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-1.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-1.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-2.png" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-2.png" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-3.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-3.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/project-4.png" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/project-4.png" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="project-card">
-                                <img src="assets/img/fav-3.jpg" class="img-fluid">
-                                <div class="views">
-                                    <p>100 views</p>
-                                </div>
-                                <div class="project-card-body">
-                                    <h5>New Capital City</h5>
-                                    <div class="offer-detailes">
-                                        <span>
-                                            Size 150M
-                                        </span>
-                                        <span> Rooms 3</span>
-                                        <span> Bathrooms 2</span>
+                            <a href="product.html">
+                                <div class="project-card">
+                                    <img src="assets/img/fav-3.jpg" class="img-fluid">
+                                    <div class="views">
+                                        <p>100 views</p>
                                     </div>
-                                    <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment Location</a>
-                                    <p class="project-price">500.000 LE</p>
+                                    <div class="project-card-body">
+                                        <h5>New Capital City</h5>
+                                        <div class="offer-detailes">
+                                            <span>
+                                                Size 150M
+                                            </span>
+                                            <span> Rooms 3</span>
+                                            <span> Bathrooms 2</span>
+                                        </div>
+                                        <a href="city.html"><i class="fal fa-map-marker-alt"></i> Appartment
+                                            Location</a>
+                                        <p class="project-price">500.000 LE</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                     </div>
@@ -701,6 +733,8 @@
                                 <img src="assets/img/pin.svg">
                                 <p>New Mansoura City</p>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -772,7 +806,8 @@
                     <div class="mb-3">
                         <textarea class="form-control global" id="" placeholder="Your Message" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="primary-btn">Send</button>
+                    <button type="submit" class="primary-btn" data-bs-dismiss="modal" data-bs-toggle="modal"
+                    data-bs-target="#success-modal">Send</button>
                 </div>
             </div>
         </section>
@@ -832,7 +867,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="primary-btn" data-bs-dismiss="modal">Send</button>
+                        <a class="primary-btn" href="account.html">Send</a>
                     </div>
                 </div>
             </div>
@@ -847,8 +882,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- <img src="assets/img/Group 1238.png" width="300px" class="failed-body">
-                    <img src="assets/img/Group 1236.png" class="failed-head"> -->
                     <img class="img-fluid" src="assets/img/failed.svg">
                     <h5 class="modal-title">The Operation Failed</h5>
                     <a href="#" data-bs-dismiss="modal">Try Again!</a>
@@ -942,7 +975,6 @@
         <div class="lower-footer">
             <p> © CopyRight 2022</p>
             <a href="https://">All Rights reserved Hoper</a>
-
         </div>
     </footer>
 
@@ -951,7 +983,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="assets/js/fa-pro.js"></script>
     <script src="assets/js/main.js"></script>
@@ -1026,9 +1057,14 @@
         });
 
     </script>
-
-
-
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="assets/datetime/js/jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+        jQuery('#datetimepicker').datetimepicker({
+            format: 'd.m.Y H:i',
+            inline: true,
+        });
+    </script>
 </body>
 
 </html>
