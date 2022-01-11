@@ -24,15 +24,30 @@ function mobileSize() {
   document.getElementById("page").style.marginRight = "0"
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 10) {
-      document.getElementById("navbar").classList.add("sticky-navbar")
+// document.addEventListener("DOMContentLoaded", function () {
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY > 10) {
+//       document.getElementById("navbar").classList.add("sticky-navbar")
+//     } else {
+//       document.getElementById("navbar").classList.remove("sticky-navbar")
+//     }
+//   })
+// })
+
+
+
+  // Toggle .header-scrolled class to #header when page is scrolled
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#navbar').addClass('header-scrolled');
     } else {
-      document.getElementById("navbar").classList.remove("sticky-navbar")
+      $('#navbar').removeClass('header-scrolled');
     }
-  })
-})
+  });
+
+  if ($(window).scrollTop() > 100) {
+    $('#navbar').addClass('header-scrolled');
+  }
 
 
 
@@ -117,7 +132,6 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
     dropZoneElement.classList.remove("drop-zone--over");
   });
 });
-
 /**
  * Updates the thumbnail on a drop zone element.
  *
@@ -153,6 +167,12 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 }
+
+
+
+
+
+
 $(document).ready(function () {
     $(function () {
         $("#my_slider").slider({
