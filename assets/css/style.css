@@ -84,10 +84,7 @@ section {
 .title.white h3{
     text-shadow: 0px 1px 3px #ffffff42;
 }
-.title.white h3::before{
-    background-color: white;
-}
-.title.white h3::after{
+.title.white h3::before , .title.white h3::after{
     background-color: white;
 }
 .page {
@@ -195,26 +192,6 @@ section {
     background-color: #302730;
     box-shadow: 0px 3px 6px 0px hsla(0, 0%, 0%, 0.226);
   }
-
-/* .page.home header{
-    align-items: center;
-}
-.page header{
-    align-items: center;
-    background-color: #302730;
-}
- .sticky-navbar {
-    z-index: 99;
-    background-color: #302736;
-    position: fixed !important;
-    top: -85px !important;
-    width: 100% !important;
-    height: 90px;
-    box-shadow: 0px 3px 6px 0px hsla(0, 0%, 0%, 0.226);
-}
-#Home-page .navbar.sticky-navbar{
-    margin-top: 0;
-} */
 .navbar-brand {
     width: fit-content;
     padding: 0 1.5rem;
@@ -228,7 +205,7 @@ section {
     left: 0;
     width: 34px;
     height: 1px;
-    bottom: 60px;
+    bottom: 61px;
     background-color: #9ea1a7;
 }
 .navbar-brand::after{
@@ -237,7 +214,7 @@ section {
     left: 165px;
     right: 0;
     height: 1px;
-    bottom: 60px;
+    bottom: 61px;
     background-color: #9ea1a7;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -667,7 +644,7 @@ text-transform: uppercase;
     background-color: #ffffff5b;
     box-shadow: 0 3px 6px 0 #0000002a;
     border: 1px solid white;
-    border-radius: 11px;
+    border-radius: 9px;
     color: #302736;
     text-align: center;
     min-width: 150px;
@@ -691,6 +668,7 @@ text-transform: uppercase;
 }
 .areas-marker:hover , .areas-marker.active {
     transform: scale(1.1);
+        background-color: #ffffffd4;   
 }
 
 
@@ -1992,7 +1970,7 @@ font-size: 15px;
     object-fit: cover;
     width: 100%;
     height: 400px;
-    object-position: bottom;
+    object-position: 0 90%;
     border-radius: 2px;
 }
 .small-img{
@@ -2169,7 +2147,7 @@ width: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: transparent;
+    background: #f5f6f8;
     border-radius: 50%;
     border: 1px solid #30242abf;
     margin: 1.5rem auto 0;
@@ -2245,7 +2223,7 @@ td.value{
     width: fit-content;
     margin-top: -215px;
     margin-bottom: 215px;
-    z-index: 9999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -2617,7 +2595,7 @@ flex-direction: row;
     .navbar .navbar-toggler {
      color: #eeeeee;
     border-radius: 50%;
-    width: 33px;
+    width: 15px;
     height: 33px;
     padding: 0;
     display: flex;
@@ -3031,6 +3009,9 @@ header{
     .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
         margin-left: calc( 50% - 17px);
     }
+    .payment {
+        background-position: 30%;
+    }
 }
 
 
@@ -3132,13 +3113,13 @@ header{
         padding: 0 1rem;
     }
     .navbar-brand::before {
-        width: 25px;
-        bottom: 50px;
+        width: 27px;
+        bottom: 56px;
     }    
     .navbar-brand::after {
-        left: 134px;
-        width: 55%;
-        bottom: 50px;
+        left: 130px;
+        width: 58%;
+        bottom: 56px;
     }
     input.code-input {
         width: 12%;
@@ -3269,6 +3250,9 @@ header{
 .meeting-btn, .book-btn, .call-btn {
     width: 90px;
     height: 90px;
+}
+.payment {
+    background-position: 17%;
 }
 }
 
