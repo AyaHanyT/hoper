@@ -1151,7 +1151,8 @@ border-color: transparent;
 
 .city.filter .modal-body {
     height: fit-content;
-    min-height: 225px;
+    min-height: 176px;
+    padding: 0;
 }
 .city .modal-dialog {
     max-width: 700px;
@@ -1165,11 +1166,11 @@ border-color: transparent;
     border: none;
 }
 .city .list-group-item.active {
-    background-color: transparent;
+    background-color: #ffffff;
     color: #2D8CFF ;
 }
 .city .list-group-item {
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
     color: #30242A;
     background-color: transparent;
     border: none;
@@ -1188,17 +1189,33 @@ border-color: transparent;
 .city .accordion-item {
     background-color: transparent
 }
-.city .accordion{
+.border-right{
     border-right: 1px solid #d9dee3;
+    min-height: 176px;
+}
+.city .accordion{
     background-color: #f8f9fa;
 }   
 .city .accordion-body {
-    padding: 1rem 2rem;
+    padding: 0rem;
 }
 .city .tab-content>.active {
     margin-top: 0.5rem;
 }
-
+.city .modal-header {
+    padding: 0rem 1rem;
+    border-bottom: 1px solid #d9dee3;
+}
+.city .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #000000;
+}
+.city .modal-footer {
+    justify-content: flex-end;
+}
+.city .primary-btn {
+    margin: 0 10px;
+}
 
 
     .sign-in-modal .modal-dialog {
