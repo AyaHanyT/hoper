@@ -37,43 +37,9 @@
                     <a class="nav-link" href="filter.html" onclick="closeNav()">Filter</a>
                     <a class="nav-link" href="Points.html" onclick="closeNav()">Points</a>
                     <a class="nav-link" href="contact.html" onclick="closeNav()">Contact Us</a>
-                    <div class="accordion accordion-flush nav-item dropdown" id="accordionFlush">
-                        <div class="accordion-item">
-                            <p class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    <a class="nav-link dropdown-toggle nav-btn" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-user"></i>
-                                    </a>
-                                </button>
-                            </p>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="dropdown-menu-side">
-                                        <li><a class="dropdown-item" href="account.html"><i
-                                                    class="far fa-sliders-h"></i>Account Settings</a></li>
-                                        <li><a class="dropdown-item" href="notification.html"><i
-                                                    class="fal fa-bell"></i>Notifications</a></li>
-                                        <li><a class="dropdown-item" href="favorites.html"><i
-                                                    class="fal fa-heart"></i>Favorites</a></li>
-                                        <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                data-bs-target="#invite-modal"><i class="fal fa-user-plus"></i>Invite a
-                                                Friend</a></li>
-                                        <li><a class="dropdown-item" href="index.html"><i
-                                                    class="fal fa-sign-out"></i>Log Out</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
+                    <a class="nav-link" href="form.html" onclick="closeNav()">Sell With Us</a>
+                    <a class="nav-link nav-btn sign-in" id="" data-bs-toggle="modal" data-bs-target="#Login-modal"
+                        href="#" onclick="closeNav()">Sign In</a>
                     <a class="nav-link lang" href="#lang" onclick="closeNav()">AR</a>
                 </div>
             </div>
@@ -106,24 +72,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html" tabindex="-1">Contact Us</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-btn" href="#" id="navbarDropdownMenuLink"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="account.html"><i
-                                                class="far fa-sliders-h"></i>Account Settings</a></li>
-                                    <li><a class="dropdown-item" href="notification.html"><i
-                                                class="fal fa-bell"></i>Notifications</a></li>
-                                    <li><a class="dropdown-item" href="favorites.html"><i
-                                                class="fal fa-heart"></i>Favorites</a></li>
-                                    <li><a class="dropdown-item" data-bs-toggle="modal"
-                                            data-bs-target="#invite-modal" href><i class="fal fa-user-plus"></i>Invite a
-                                            Friend</a></li>
-                                    <li><a class="dropdown-item" href="index.html"><i class="fal fa-sign-out"></i>Log
-                                            Out</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="form.html" tabindex="-1">Sell With Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn sign-in" id="" data-bs-toggle="modal"
+                                    data-bs-target="#Login-modal" href="#" tabindex="-1">Sign In</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link lang" href="" tabindex="-1">AR</a>
@@ -139,41 +93,150 @@
             </div>
         </header>
 
-        <section id="account">
+        <section id="form-page">
             <div class="container-fluid">
-                <div class="title">
-                    <h3>Your Account</h3>
+                <div class="title white">
+                    <h3>Sell Your Property with Us!</h3>
                 </div>
                 <div class="container">
-                    <div class="contact-form">
-                        <div class="mb-1 form-floating">
-                            <input type="text" class="form-control global" id="floatingInputname" placeholder="John"
-                                value="Ahmed" required>
-                            <label for="floatingInputname">User Name</label>
+                    <div class="row">
+                        <div class="col-sm-8 col-12 apply-form">
+                            <h5>Owner Data</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global" id="" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control global" id="" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control global" id="" placeholder="Phone Number">
+                            </div>
+                            <div>
+                                <p>Upload your ID card</p>
+                                <div class="drop-zone">
+                                    <span class="drop-zone__prompt">Choose file</span>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+
+                            <hr>
+                            <h5>Location & Type</h5>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="city">
+                                    <option selected>City</option>
+                                    <option value="1">New Capital city</option>
+                                    <option value="2">New Mansoura</option>
+                                    <option value="3">Alalamain</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="property-type">
+                                    <option selected>Property Type</option>
+                                    <option value="1">Managerial</option>
+                                    <option value="2">Residential</option>
+                                    <option value="3">Commercial</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="property-title">
+                                    <option selected>Property Title</option>
+                                    <option value="1">title</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="type">
+                                    <option selected>Type</option>
+                                    <option value="1">Appartment</option>
+                                    <option value="2">Shop</option>
+                                </select>
+                            </div>
+                            <hr>
+                            <h5>Property Details</h5>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="size">
+                                    <option selected>Size</option>
+                                    <option value="1">250M</option>
+                                    <option value="2">300M</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="outer-size">
+                                    <option selected>Outer Size</option>
+                                    <option value="1">250M</option>
+                                    <option value="2">300M</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="floor">
+                                    <option selected>Floor</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select global" aria-label="view">
+                                    <option selected>View</option>
+                                    <option value="1">Sea View</option>
+                                </select>
+                            </div>
+                            <hr>
+                            <h5>Arabic Data</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global ar" id="" placeholder="الأسم بالعربي">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global ar" id="" placeholder="العنوان بالعربي">
+                            </div>
+                            <textarea class="form-control global ar mb-3" rows="3" id=""
+                                placeholder="الوصف بالعربي"></textarea>
+                            <hr>
+                            <h5>English Data</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global" id="" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global" id="" placeholder="Address">
+                            </div>
+                            <textarea class="form-control global mb-3" rows="3" id=""
+                                placeholder="Description"></textarea>
+                            <hr>
+                            <h5>...</h5>
+                            <div class="mb-3">
+                                <input type="number" class="form-control global" id="" placeholder="Price">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global" id="" placeholder="size">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control global" id="" placeholder="Acheivements">
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control global" id="" placeholder="Deadline">
+                            </div>
+                            <hr>
+                            <a href="">
+                                <h5>Add Payment method</h5>
+                            </a>
+                            <a href="">
+                                <h5>Add Service</h5>
+                            </a>
+                            <div>
+                                <p>Add a Picture of the property</p>
+                                <div class="drop-zone">
+                                    <span class="drop-zone__prompt">Choose file</span>
+                                    <input type="file" name="pic" class="drop-zone__input">
+                                </div>
+                                <a class="m-3" id="add-extra-pic">Add more</a>
+                                <div id="UploadsContainer"></div>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.979802931369!2d31.445209014629608!3d31.469741756790043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f75b4a48e2f8f3%3A0x89feea371bed4d1f!2sNew%20Mansoura%20City!5e0!3m2!1sen!2seg!4v1644133949839!5m2!1sen!2seg" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <button type="submit" class="primary-btn contact-btn">Send</button>
                         </div>
-                        <div class="mb-1 form-floating">
-                            <input type="tel" class="form-control global" id="floatingInputphone" placeholder="0100"
-                                value="+20100000000" required>
-                            <label for="floatingInputphone">Phone Number</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="email" class="form-control global" id="floatingInputemail" placeholder="">
-                            <label for="floatingInputemail">Email Address</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="text" class="form-control global" id="floatingInputaddress" placeholder="">
-                            <label for="floatingInputaddress">Address</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="number" class="form-control global" id="floatingInputage" placeholder="">
-                            <label for="floatingInputage">Age</label>
-                        </div>
-                        <button type="submit" class="primary-btn account-btn">Save</button>
                     </div>
                 </div>
             </div>
         </section>
-
 
     </main>
 
@@ -272,28 +335,6 @@
         </div>
     </div>
 
-    <div class="modal fade pop-up" id="invite-modal" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex">
-                    <img class="img-fluid" src="assets/img/invite.svg">
-                    <div>
-                        <h5 class="modal-title" style="color: #2D8CFF;">Enter Your Friend's number to
-                            invite them</h5>
-                        <input type="tel" class="form-control global m-3" id="" placeholder="Phone number">
-                        <div class="modal-footer">
-                            <button type="button" class="primary-btn" data-bs-dismiss="modal">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer>
         <div class="container">
             <div class="upper-footer">
@@ -373,7 +414,12 @@
     <script src="assets/js/main.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <script>
+        $("#add-extra-pic").click(function () {
+            $("#UploadsContainer").append('<div class="drop-zone mb-2"><span class="drop-zone__prompt">Choose file</span><input type="file" name="pic" class="drop-zone__input"></div>')
+        }
+        )
+    </script>
 </body>
 
 </html>

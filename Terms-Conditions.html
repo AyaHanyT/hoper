@@ -37,43 +37,8 @@
                     <a class="nav-link" href="filter.html" onclick="closeNav()">Filter</a>
                     <a class="nav-link" href="Points.html" onclick="closeNav()">Points</a>
                     <a class="nav-link" href="contact.html" onclick="closeNav()">Contact Us</a>
-                    <div class="accordion accordion-flush nav-item dropdown" id="accordionFlush">
-                        <div class="accordion-item">
-                            <p class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    <a class="nav-link dropdown-toggle nav-btn" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-user"></i>
-                                    </a>
-                                </button>
-                            </p>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="dropdown-menu-side">
-                                        <li><a class="dropdown-item" href="account.html"><i
-                                                    class="far fa-sliders-h"></i>Account Settings</a></li>
-                                        <li><a class="dropdown-item" href="notification.html"><i
-                                                    class="fal fa-bell"></i>Notifications</a></li>
-                                        <li><a class="dropdown-item" href="favorites.html"><i
-                                                    class="fal fa-heart"></i>Favorites</a></li>
-                                        <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                data-bs-target="#invite-modal"><i class="fal fa-user-plus"></i>Invite a
-                                                Friend</a></li>
-                                        <li><a class="dropdown-item" href="index.html"><i
-                                                    class="fal fa-sign-out"></i>Log Out</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
+                    <a class="nav-link nav-btn sign-in" id="" data-bs-toggle="modal" data-bs-target="#Login-modal"
+                        href="#" onclick="closeNav()">Sign In</a>
                     <a class="nav-link lang" href="#lang" onclick="closeNav()">AR</a>
                 </div>
             </div>
@@ -106,24 +71,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html" tabindex="-1">Contact Us</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-btn" href="#" id="navbarDropdownMenuLink"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="account.html"><i
-                                                class="far fa-sliders-h"></i>Account Settings</a></li>
-                                    <li><a class="dropdown-item" href="notification.html"><i
-                                                class="fal fa-bell"></i>Notifications</a></li>
-                                    <li><a class="dropdown-item" href="favorites.html"><i
-                                                class="fal fa-heart"></i>Favorites</a></li>
-                                    <li><a class="dropdown-item" data-bs-toggle="modal"
-                                            data-bs-target="#invite-modal" href><i class="fal fa-user-plus"></i>Invite a
-                                            Friend</a></li>
-                                    <li><a class="dropdown-item" href="index.html"><i class="fal fa-sign-out"></i>Log
-                                            Out</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn sign-in" id="" data-bs-toggle="modal"
+                                    data-bs-target="#Login-modal" href="#" tabindex="-1">Sign In</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link lang" href="" tabindex="-1">AR</a>
@@ -139,40 +89,39 @@
             </div>
         </header>
 
-        <section id="account">
+        <section id="favorites">
             <div class="container-fluid">
                 <div class="title">
-                    <h3>Your Account</h3>
+                    <h3>Terms and Conditions</h3>
                 </div>
                 <div class="container">
-                    <div class="contact-form">
-                        <div class="mb-1 form-floating">
-                            <input type="text" class="form-control global" id="floatingInputname" placeholder="John"
-                                value="Ahmed" required>
-                            <label for="floatingInputname">User Name</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="tel" class="form-control global" id="floatingInputphone" placeholder="0100"
-                                value="+20100000000" required>
-                            <label for="floatingInputphone">Phone Number</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="email" class="form-control global" id="floatingInputemail" placeholder="">
-                            <label for="floatingInputemail">Email Address</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="text" class="form-control global" id="floatingInputaddress" placeholder="">
-                            <label for="floatingInputaddress">Address</label>
-                        </div>
-                        <div class="mb-1 form-floating">
-                            <input type="number" class="form-control global" id="floatingInputage" placeholder="">
-                            <label for="floatingInputage">Age</label>
-                        </div>
-                        <button type="submit" class="primary-btn account-btn">Save</button>
-                    </div>
+                    <h6 class="normal-text">Last-updated: 1-1-2022</h6>
+                    <p class="normal-text gray">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <p class="normal-text gray">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <p class="normal-text gray">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
                 </div>
             </div>
         </section>
+
+
 
 
     </main>
@@ -247,6 +196,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- <img src="assets/img/Group 1238.png" width="300px" class="failed-body">
+                <img src="assets/img/Group 1236.png" class="failed-head"> -->
                     <img class="img-fluid" src="assets/img/failed.svg">
                     <h5 class="modal-title">The Operation Failed</h5>
                     <a href="#" data-bs-dismiss="modal">Try Again!</a>
@@ -264,31 +215,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- <img src="assets/img/Group 1238.png" width="300px" class="failed-body">
+                <img src="assets/img/Group 1236.png" class="failed-head"> -->
                     <img class="img-fluid" src="assets/img/success.svg">
                     <h5 class="modal-title">Completed Successfully</h5>
                     <a href="#" data-bs-dismiss="modal">Thank you!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade pop-up" id="invite-modal" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex">
-                    <img class="img-fluid" src="assets/img/invite.svg">
-                    <div>
-                        <h5 class="modal-title" style="color: #2D8CFF;">Enter Your Friend's number to
-                            invite them</h5>
-                        <input type="tel" class="form-control global m-3" id="" placeholder="Phone number">
-                        <div class="modal-footer">
-                            <button type="button" class="primary-btn" data-bs-dismiss="modal">Send</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
