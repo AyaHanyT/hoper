@@ -592,10 +592,6 @@ text-transform: uppercase;
 
 /********* projects **/
 #projects{
-    background-image: url(../img/bg-projects.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     min-height: fit-content;
 }
 #projects .project-card {
@@ -612,12 +608,21 @@ text-transform: uppercase;
 }
 
 /******** Map **********/
+.map{
+    padding: 0;
+}
 #map{
     background-image: url(../img/bg-map-2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 2rem 2rem;
+    padding: 2rem 2rem;
+}
+.map .buttons{
+    background-color: #E4E4E4;
+}
+.map .search-category{
+   background-color: hsl(218deg 41% 68% / 26%);
 }
 #map h4{
     color: white;
