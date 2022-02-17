@@ -86,10 +86,10 @@ function showDivs(n) {
     x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+    dots[i].className = dots[i].className.replace("opacity-off", "opacity-on");
   }
   x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
+  dots[slideIndex-1].className += " opacity-off";
 }
 
 
@@ -181,10 +181,29 @@ $(document).ready(function () {
             values: [10000, 90000000],
             range: true,
             slide: function (event, ui) {
-                $("#display_start").html(ui.values[0] + "LE"),
-                    $("#display_end").html(ui.values[1] + "LE");
+                    $('#display_end').val(ui.values[1] + "LE");
+                    $('#display_start').val(ui.values[0] + "LE");
             }
         });
     });
 
 })
+
+
+
+
+
+
+
+
+
+
+  // Initiate the venobox plugin
+  $(window).on('load', function() {
+    $('.venobox').venobox();
+  });
+  
+  // Initiate venobox lightbox
+  $(document).ready(function() {
+    $('.venobox').venobox();
+  });
