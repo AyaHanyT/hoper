@@ -575,6 +575,7 @@ text-transform: uppercase;
     color: #2D8CFF;
     border-radius: 50%;
     border: 1px solid #2D8CFF;
+    background-color: #e4e4e475;
 }
 .OfferSwiper .swiper-button-prev:after, .OfferSwiper .swiper-rtl .swiper-button-next:after {
     content: '';
@@ -610,6 +611,7 @@ text-transform: uppercase;
 /******** Map **********/
 .map{
     padding: 0;
+    min-height: fit-content;
 }
 #map{
     background-image: url(../img/bg-map-2.png);
@@ -617,9 +619,23 @@ text-transform: uppercase;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem 2rem;
+    height: 100%;
 }
 .map .buttons{
     background-color: #E4E4E4;
+    padding-right: 0;
+    overflow-x: scroll;
+}
+.map .buttons::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+    background-color: #e4e4e4;
+}
+.map .buttons::-webkit-scrollbar-thumb {
+    background-color: #adadad;
+    width: 4px;
+    height: 3px;
+    border-radius: 3px;
 }
 .map .search-category{
    background-color: hsl(218deg 41% 68% / 26%);
@@ -684,6 +700,7 @@ text-decoration: underline;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin: 0.5rem;
 }
 .areas-marker img{ 
     width: 32px;
@@ -711,7 +728,7 @@ text-decoration: underline;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    min-height: 75vh;
+    min-height: 65vh;
 }
 #sold .text{
     height: 100%;
@@ -2949,6 +2966,7 @@ header{
     }
     #sold {
         background-image: url(../img/bg-sold-sm.svg);
+        min-height: 55vh;
     }
     #sold .primary-img {
         margin-left: 0rem;
