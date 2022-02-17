@@ -374,15 +374,15 @@ display: none;
 .buttons{
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: space-around;
     padding-right: 50px;
 }
 .buttons .search-category{
     margin: 1rem 0;
     background-color: hsla(0, 0%, 88%, 0.651);
     border-radius: 17px;
-    width: 75px;
-    padding: 5px 10px;
+    min-width: 80px;
+    padding: 5px 12px;
     color: black;
     text-align: center;
     text-shadow: 0px 3px 6px #00000075;
@@ -596,6 +596,7 @@ text-transform: uppercase;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    min-height: fit-content;
 }
 #projects .project-card {
     padding: 0.6rem;
@@ -616,7 +617,7 @@ text-transform: uppercase;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 2rem 2rem;
+    padding: 0 2rem 2rem;
 }
 #map h4{
     color: white;
@@ -1170,7 +1171,7 @@ border-color: transparent;
 .city .list-group-item {
     padding: 0.5rem 1.5rem;
     color: #30242A;
-    background-color: transparent;
+    background-color: #f8f9fa;
     border: none;
     border-bottom: 1px solid #d9dee3;
 }
@@ -1180,13 +1181,16 @@ border-color: transparent;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
+.list-group-item+.list-group-item.active {
+    margin-top: 0;
+    border-top-width: 1px;
+}
 .city .accordion-item {
     background-color: transparent
 }
 .border-right{
     border-right: 1px solid #d9dee3;
-    min-height: 220px;
+    min-height: 156px;
 }
 .city .accordion{
     background-color: #f8f9fa;
@@ -1196,6 +1200,7 @@ border-color: transparent;
 }
 .city .tab-content>.active {
     margin-top: 0.5rem;
+    min-height: 156px;
 }
 .city .modal-header {
     padding: 0rem 1rem;
@@ -2736,9 +2741,6 @@ flex-direction: row;
     #contact .title h3::before {
         left: 190px;
     }
-    #projects {
-        background-image: url(../img/bg-projects-md.png);
-    }    
     #projects .project-card {
         margin: 1rem 1.2rem 2rem;
     }
@@ -2971,9 +2973,6 @@ header{
     }
     .list-unstyled.middle {
         margin-left: unset;
-    }
-    #projects {
-        background-image: url(../img/bg-projects-sm.png);
     }
     .project-card img {
         height: 240px;
