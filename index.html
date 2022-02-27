@@ -40,7 +40,7 @@
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <a class="nav-link active" href="index.html" onclick="closeNav()">Home</a>
                     <a class="nav-link" href="about.html" onclick="closeNav()">About Us</a>
-                    <a class="nav-link" href="filter.html" onclick="closeNav()">Filter</a>
+                    <a class="nav-link" href="filter.html" onclick="closeNav()">Cities</a>
                     <a class="nav-link" href="Points.html" onclick="closeNav()">Points</a>
                     <a class="nav-link" href="contact.html" onclick="closeNav()">Contact Us</a>
                     <a class="nav-link" href="form.html" onclick="closeNav()">Sell With Us</a>
@@ -70,7 +70,7 @@
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="filter.html">Filter</a>
+                                <a class="nav-link" href="filter.html">Cities</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="points.html">Points</a>
@@ -111,268 +111,338 @@
                 </div>
             </div>
         </div>
-        <div class="overlay">
-            <div class="search-box">
-                <h2>Find Your Perfect Home</h2>
-                <div class="input-group">
-                    <input type="search" class="form-control search-input" placeholder="Search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                    <button class="search-button" id="search-addon">
-                        <i class="fal fa-search"></i>
-                    </button>
-                </div>
-                <div class="buttons">
-                    <a class="search-category" id="search-by-city" data-bs-toggle="modal"
-                        data-bs-target="#cities-list">Filter</a>
-                </div>
-            </div>
-            <!-- Modal -->  
-            <div class="modal fade filter city" id="cities-list" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Filter</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="overlay container-fluid">
+            <div class="row gx-0">
+                <div class="col-lg-4 col-sm-3 col-12 order-sm-1 order-3">
+                    <div class="boxes">
+                        <div class="box">
+                            <img src="assets/img/home.png">
+                            <span>300</span>
+                            <p>Projects</p>
                         </div>
-                        <div class="modal-body container-fluid">
-                            <div class="row gx-0 border-bottom">
-                                <div class="col-4 border-right">
-                                    <div class="list-group" id="list-tab" role="tablist">
-                                        <a class="list-group-item list-group-item-action active" id="list-city-list"
-                                            data-bs-toggle="list" href="#list-city" role="tab"
-                                            aria-controls="list-city">Cites</a>
-                                        <a class="list-group-item list-group-item-action" id="list-project-list"
-                                            data-bs-toggle="list" href="#list-project" role="tab"
-                                            aria-controls="list-project">Projects</a>
-                                        <a class="list-group-item list-group-item-action" id="list-price-list"
-                                            data-bs-toggle="list" href="#list-price" role="tab"
-                                            aria-controls="list-price">Price Range</a>
-                                        <a class="list-group-item list-group-item-action" id="list-filter-list"
-                                            data-bs-toggle="list" href="#list-filter" role="tab"
-                                            aria-controls="list-filter">Filter</a>
+                        <div class="box">
+                            <img src="assets/img/user.png">
+                            <span>200</span>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="box">
+                            <img src="assets/img/key.png">
+                            <span>200</span>
+                            <p>Sold Properties</p>
+                        </div>
+                        <div class="box">
+                            <img src="assets/img/city.png">
+                            <span>50</span>
+                            <p>Cities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 div-2 col-sm-6 order-2">
+                    <div class="search-box">
+                        <h2>Find Your Perfect Home</h2>
+                        <div class="input-group">
+                            <input type="search" class="form-control search-input" placeholder="Search"
+                                aria-label="Search" aria-describedby="search-addon" />
+                            <button class="search-button" id="search-addon">
+                                <i class="fal fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="buttons">
+                            <div class="form-check">
+                                <label class="form-check-label" for="search-filter-1">
+                                    <input class="form-check-input" type="radio" name="search-filter"
+                                        id="search-filter-1">
+                                    <p>City</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label" for="search-filter-2">
+                                    <input class="form-check-input" type="radio" name="search-filter"
+                                        id="search-filter-2">
+                                    <p>Type</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label" for="search-filter-3">
+                                    <input class="form-check-input" type="radio" name="search-filter"
+                                        id="search-filter-3">
+                                    <p>Price</p>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-3 order-sm-3 offer-1">
+                    <div class="filter-warpper">
+                        <button class="filter-btn" id="search-by-filter" data-bs-toggle="modal"
+                            data-bs-target="#filter-list"><img src="assets/img/white-arrow.png"> Filter</button>
+                        <!-- Modal -->
+                        <div class="modal fade filter city" id="filter-list" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Filter</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="tab-content" id="nav-tabContent">
-                                        <div class="tab-pane fade show active" id="list-city" role="tabpanel"
-                                            aria-labelledby="list-city-list">
-                                            <div class="row gx-0">
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-1">
-                                                            <label class="form-check-label" for="project-1">
-                                                                <img src="assets/img/type-1.jpg" class="img-fluid">
-                                                                <p>Alamein Tower</p>
-                                                            </label>
+                                    <div class="modal-body container-fluid">
+                                        <div class="row gx-0 border-bottom">
+                                            <div class="col-4 border-right">
+                                                <div class="list-group" id="list-tab" role="tablist">
+                                                    <a class="list-group-item list-group-item-action active"
+                                                        id="list-city-list" data-bs-toggle="list" href="#list-city"
+                                                        role="tab" aria-controls="list-city">Cites</a>
+                                                    <a class="list-group-item list-group-item-action"
+                                                        id="list-project-list" data-bs-toggle="list"
+                                                        href="#list-project" role="tab"
+                                                        aria-controls="list-project">Projects</a>
+                                                    <a class="list-group-item list-group-item-action"
+                                                        id="list-price-list" data-bs-toggle="list" href="#list-price"
+                                                        role="tab" aria-controls="list-price">Price Range</a>
+                                                    <a class="list-group-item list-group-item-action"
+                                                        id="list-filter-list" data-bs-toggle="list" href="#list-filter"
+                                                        role="tab" aria-controls="list-filter">Filter</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <div class="tab-pane fade show active" id="list-city"
+                                                        role="tabpanel" aria-labelledby="list-city-list">
+                                                        <div class="row gx-0">
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-1">
+                                                                        <label class="form-check-label" for="project-1">
+                                                                            <img src="assets/img/type-1.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>Alamein Tower</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-1">
+                                                                        <label class="form-check-label" for="project-1">
+                                                                            <img src="assets/img/type-1.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>Alamein Tower</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-2">
+                                                                        <label class="form-check-label" for="project-2">
+                                                                            <img src="assets/img/type-5.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Mansoura Mall</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-3">
+                                                                        <label class="form-check-label" for="project-3">
+                                                                            <img src="assets/img/city-4.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Capital City Residential</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-4">
+                                                                        <label class="form-check-label" for="project-4">
+                                                                            <img src="assets/img/type-1.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>Alamein Tower</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-5">
+                                                                        <label class="form-check-label" for="project-5">
+                                                                            <img src="assets/img/type-5.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Mansoura Mall</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-6">
+                                                                        <label class="form-check-label" for="project-6">
+                                                                            <img src="assets/img/city-4.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Capital City Residential</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-1">
-                                                            <label class="form-check-label" for="project-1">
-                                                                <img src="assets/img/type-1.jpg" class="img-fluid">
-                                                                <p>Alamein Tower</p>
-                                                            </label>
+                                                    <div class="tab-pane fade" id="list-project" role="tabpanel"
+                                                        aria-labelledby="list-project-list">
+                                                        <div class="row gx-0">
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-1">
+                                                                        <label class="form-check-label" for="project-1">
+                                                                            <img src="assets/img/type-1.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>Alamein Tower</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-2">
+                                                                        <label class="form-check-label" for="project-2">
+                                                                            <img src="assets/img/type-5.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Mansoura Mall</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-3">
+                                                                        <label class="form-check-label" for="project-3">
+                                                                            <img src="assets/img/city-4.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Capital City Residential</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-4">
+                                                                        <label class="form-check-label" for="project-4">
+                                                                            <img src="assets/img/type-1.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>Alamein Tower</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-5">
+                                                                        <label class="form-check-label" for="project-5">
+                                                                            <img src="assets/img/type-5.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Mansoura Mall</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-4">
+                                                                <div class="category-card">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="project" id="project-6">
+                                                                        <label class="form-check-label" for="project-6">
+                                                                            <img src="assets/img/city-4.jpg"
+                                                                                class="img-fluid">
+                                                                            <p>New Capital City Residential</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-2">
-                                                            <label class="form-check-label" for="project-2">
-                                                                <img src="assets/img/type-5.jpg" class="img-fluid">
-                                                                <p>New Mansoura Mall</p>
-                                                            </label>
+                                                    <div class="tab-pane fade" id="list-price" role="tabpanel"
+                                                        aria-labelledby="list-price-list">
+                                                        <div class="container-fluid">
+                                                            <div class="price-range">
+                                                                <div id=my_display_event></div>
+                                                                <br>
+                                                                <div id="my_slider"></div>
+                                                            </div>
+                                                            <div class="displys">
+                                                                <input id="display_start" value="10.000LE"
+                                                                    class="slider-value text-left" />
+                                                                <input id="display_end" value="90.000.000LE"
+                                                                    class="slider-value text-right" />
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-3">
-                                                            <label class="form-check-label" for="project-3">
-                                                                <img src="assets/img/city-4.jpg" class="img-fluid">
-                                                                <p>New Capital City Residential</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-4">
-                                                            <label class="form-check-label" for="project-4">
-                                                                <img src="assets/img/type-1.jpg" class="img-fluid">
-                                                                <p>Alamein Tower</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-5">
-                                                            <label class="form-check-label" for="project-5">
-                                                                <img src="assets/img/type-5.jpg" class="img-fluid">
-                                                                <p>New Mansoura Mall</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-6">
-                                                            <label class="form-check-label" for="project-6">
-                                                                <img src="assets/img/city-4.jpg" class="img-fluid">
-                                                                <p>New Capital City Residential</p>
-                                                            </label>
+                                                    <div class="tab-pane fade" id="list-filter" role="tabpanel"
+                                                        aria-labelledby="list-filter-list">
+                                                        <div class="row gx-0">
+                                                            <div class="col-6">
+                                                                <div class="type-filter">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="type" id="rent">
+                                                                        <label class="form-check-label" for="buy">
+                                                                            Buy
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="type-filter">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="type" id="sell">
+                                                                        <label class="form-check-label" for="sell">
+                                                                            Sell
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="list-project" role="tabpanel"
-                                            aria-labelledby="list-project-list">
-                                            <div class="row gx-0">
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-1">
-                                                            <label class="form-check-label" for="project-1">
-                                                                <img src="assets/img/type-1.jpg" class="img-fluid">
-                                                                <p>Alamein Tower</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-2">
-                                                            <label class="form-check-label" for="project-2">
-                                                                <img src="assets/img/type-5.jpg" class="img-fluid">
-                                                                <p>New Mansoura Mall</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-3">
-                                                            <label class="form-check-label" for="project-3">
-                                                                <img src="assets/img/city-4.jpg" class="img-fluid">
-                                                                <p>New Capital City Residential</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-4">
-                                                            <label class="form-check-label" for="project-4">
-                                                                <img src="assets/img/type-1.jpg" class="img-fluid">
-                                                                <p>Alamein Tower</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-5">
-                                                            <label class="form-check-label" for="project-5">
-                                                                <img src="assets/img/type-5.jpg" class="img-fluid">
-                                                                <p>New Mansoura Mall</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-4">
-                                                    <div class="category-card">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="project"
-                                                                id="project-6">
-                                                            <label class="form-check-label" for="project-6">
-                                                                <img src="assets/img/city-4.jpg" class="img-fluid">
-                                                                <p>New Capital City Residential</p>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="list-price" role="tabpanel"
-                                            aria-labelledby="list-price-list">
-                                            <div class="container-fluid">
-                                                <div class="price-range">
-                                                    <div id=my_display_event></div>
-                                                    <br>
-                                                    <div id="my_slider"></div>
-                                                </div>
-                                                <div class="displys">
-                                                    <input id="display_start" value="10.000LE" class="slider-value text-left" />
-                                                    <input id="display_end" value="90.000.000LE" class="slider-value text-right" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="list-filter" role="tabpanel"
-                                            aria-labelledby="list-filter-list">
-                                            <div class="row gx-0">
-                                                <div class="col-6">
-                                                    <div class="type-filter">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="type"
-                                                                id="rent">
-                                                            <label class="form-check-label" for="buy">
-                                                                Buy
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="type-filter">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="type"
-                                                                id="sell">
-                                                            <label class="form-check-label" for="sell">
-                                                                Sell
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="primary-btn" data-bs-dismiss="modal">Go!</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="primary-btn" data-bs-dismiss="modal">Go!</button>
-                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <section id="city">
@@ -697,51 +767,68 @@
                 <a class="search-category" id="city-id">Alamein</a>
                 <a class="search-category" id="city-id">Alamein</a>
             </div>
+            <div class="location-details-card d-md-none d-flex">
+                <img class="img-fluid" src="assets/img/map-img.jpg">
+                <div class="bordered"></div>
+                <div class="location-data">
+                    <h6>
+                        New Mansoura City
+                    </h6>
+                    <p>
+                        Prices starting from 1M
+                    </p>
+                    <div class="gray">
+                        <p>Size: 200M</p>
+                        <p>Deadline: March/2022</p>
+                        <a href="">See More</a>
+                    </div>
+                </div>
+            </div>
             <div id="map">
-             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3 col-md-5 col-12">
-                        <h4>
-                            Hottest areas prices
-                        </h4>
-                        <div class="location-details-card">
-                            <img class="img-fluid" src="assets/img/map-img.jpg">
-                            <div class="bordered"></div>
-                            <div class="location-data">
-                                <h6>
-                                    New Mansoura City
-                                </h6>
-                                <p>
-                                    Prices starting from 1M
-                                </p>
-                                <div class="gray">
-                                    <p>Size: 200M</p>
-                                    <p>Deadline: March/2022</p>
-                                    <a href="">See More</a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-5 col-12">
+                            <h4>
+                                Hottest areas prices
+                            </h4>
+                            <div class="location-details-card d-md-flex d-none">
+                                <img class="img-fluid" src="assets/img/map-img.jpg">
+                                <div class="bordered"></div>
+                                <div class="location-data">
+                                    <h6>
+                                        New Mansoura City
+                                    </h6>
+                                    <p>
+                                        Prices starting from 1M
+                                    </p>
+                                    <div class="gray">
+                                        <p>Size: 200M</p>
+                                        <p>Deadline: March/2022</p>
+                                        <a href="">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-7 col-12">
+                            <div class="locations d-flex justify-content-around">
+                                <div class="areas-marker">
+                                    <img src="assets/img/pin.svg">
+                                    <p>New Mansoura City</p>
+                                </div>
+                                <div class="areas-marker">
+                                    <img src="assets/img/pin.svg">
+                                    <p>New Mansoura City</p>
+                                </div>
+                                <div class="areas-marker">
+                                    <img src="assets/img/pin.svg">
+                                    <p>New Mansoura City</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-7 col-12">
-                        <div class="locations d-flex justify-content-around">
-                            <div class="areas-marker">
-                                <img src="assets/img/pin.svg">
-                                <p>New Mansoura City</p>
-                            </div>
-                            <div class="areas-marker">
-                                <img src="assets/img/pin.svg">
-                                <p>New Mansoura City</p>
-                            </div>
-                            <div class="areas-marker">
-                                <img src="assets/img/pin.svg">
-                                <p>New Mansoura City</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                </div>
             </div>
-        </div>
         </section>
 
         <section id="sold">
