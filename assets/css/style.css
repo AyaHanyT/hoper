@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
-/* @font-face {
-    font-family: 'Century Gothic';
-    src: url(../fonts/century-gothic/CenturyGothic.ttf),
-    url(../fonts/century-gothic/GOTHIC.TTF),
-    url(../fonts/century-gothic/GOTHICB.TTF),
-    url(../fonts/century-gothic/GOTHICBI.TTF),
-    url(../fonts/century-gothic/GOTHICitalic.TTF);
-} */
 @font-face {
     font-family: 'circular';
     src: url(../fonts/Circular/ProductSans-Regular.ttf),
@@ -1683,6 +1675,11 @@ footer{
 #types.choosed .type-card p{
     font-size: 14px;
 }
+.buttons.projects{
+    gap: 10px;
+    justify-content:unset;
+}
+
 #partial-type{
     margin: 2rem 0;
 }
@@ -2269,11 +2266,11 @@ font-size: 15px;
 }
 .vbox-content {
 padding: 0px 0%;
+height: 100%;
 }
 .vbox-container img {
     max-width: 80%;
-    height: auto;
-    min-width: 60%;
+    height: calc(100% - 60px);
 }
 .w-90{
     width: 93%;
