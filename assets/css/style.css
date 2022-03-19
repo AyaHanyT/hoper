@@ -753,6 +753,31 @@ text-transform: uppercase;
         top: unset;
         right: unset;
 }
+.filter-btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.filter-btns .prop-btn{
+    margin: 0.5rem 0 0;
+    background-color: rgb(45, 140 , 255 , 80%);
+    border-radius: 17px;
+    min-width: 80px;
+    padding: 5px 12px;
+    text-align: center;
+    text-shadow: 0px 3px 6px #00000075;
+    border: none;
+    cursor: pointer;
+    min-height: 34px;
+    color: white;
+}
+.filter-btns .prop-btn:hover{
+    background-color: rgb(125, 146, 171, 80%);
+}
+
+
 
 /******** Map **********/
 .map{
@@ -1674,10 +1699,6 @@ footer{
 }
 #types.choosed .type-card p{
     font-size: 14px;
-}
-.buttons.projects{
-    gap: 10px;
-    justify-content:unset;
 }
 
 #partial-type{
